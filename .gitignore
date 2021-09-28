@@ -1,3 +1,6 @@
-#.gitignore
+#arquivos
+.gitignore
 *.pdf
-!.Teorica/exercicios/executaveis/
+
+#diretorios
+Teorica/exercicios/executaveis/
