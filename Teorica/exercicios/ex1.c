@@ -12,6 +12,6 @@ int main(){
 
     printf("x=%d, y=%d, z=%d", x, y, z);//resultado leitura
 
-    printf(" o resultado é %d\n", (x * x  * x) + (y * y) + (x * y * z));//esultado calculo
+    printf(" o resultado é %d\n", (x * x  * x) + (y * y) + (x * y * z));//resultado calculo
     return 0;
 };
