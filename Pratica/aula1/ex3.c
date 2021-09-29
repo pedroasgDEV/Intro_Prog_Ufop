@@ -25,9 +25,9 @@ int main(){
     //Entrada
     printf("Digite um numero: ");
     scanf("%d", &numero_1);
-    printf("Digite outro numero: ");
+    printf("Digite outro numero diferente do anterior: ");
     scanf("%d", &numero_2);
-    printf("Digite mais outro numero: ");
+    printf("Digite mais outro numero diferente dos anteriores: ");
     scanf("%d", &numero_3);
 
     //Processamento
@@ -35,44 +35,32 @@ int main(){
     
     //Probabilidade 1
     if((numero_1 > numero_2) && (numero_1 > numero_3) && (numero_2 > numero_3)){
-        printf("Menor: \"%d\"\n", numero_3);//Saida
-        printf("Intermediario: \"%d\"\n", numero_2);//Saida
-        printf("Maior: \"%d\"\n", numero_1);//Saida
+        printf("Menor: \"%d\"\nIntermediario: \"%d\"\nMaior: \"%d\"\n", numero_3, numero_2, numero_1);//Saida
     }
     
     //Probabilidade 2
     if((numero_1 > numero_2) && (numero_1 > numero_3) && (numero_2 < numero_3)){
-        printf("Menor: \"%d\"\n", numero_2);//Saida
-        printf("Intermediario: \"%d\"\n", numero_3);//Saida
-        printf("Maior: \"%d\"\n", numero_1);//Saida
+        printf("Menor: \"%d\"\nIntermediario: \"%d\"\nMaior: \"%d\"\n", numero_2, numero_3, numero_1);//Saida
     }
     
     //Probabilidade 3
     if((numero_1 > numero_2) && (numero_1 < numero_3)){
-        printf("Menor: \"%d\"\n", numero_2);//Saida
-        printf("Intermediario: \"%d\"\n", numero_1);//Saida
-        printf("Maior: \"%d\"\n", numero_3);//Saida
+        printf("Menor: \"%d\"\nIntermediario: \"%d\"\nMaior: \"%d\"\n", numero_2, numero_1, numero_3);//Saida
     }
     
     //Probabilidade 4
     if((numero_1 < numero_2) && (numero_1 > numero_3)){
-        printf("Menor: \"%d\"\n", numero_3);//Saida
-        printf("Intermediario: \"%d\"\n", numero_1);//Saida
-        printf("Maior: \"%d\"\n", numero_2);//Saida
+        printf("Menor: \"%d\"\nIntermediario: \"%d\"\nMaior: \"%d\"\n", numero_3, numero_1, numero_2);//Saida
     }
     
     //Probabilidade 5
     if((numero_1 < numero_2) && (numero_1 < numero_3) && (numero_2 > numero_3)){
-        printf("Menor: \"%d\"\n", numero_1);//Saida
-        printf("Intermediario: \"%d\"\n", numero_3);//Saida
-        printf("Maior: \"%d\"\n", numero_2);//Saida
+        printf("Menor: \"%d\"\nIntermediario: \"%d\"\nMaior: \"%d\"\n", numero_1, numero_3, numero_2);//Saida
     }
 
     //Probabilidade 6
     if((numero_1 < numero_2) && (numero_1 < numero_3) && (numero_2 < numero_3)){
-        printf("Menor: \"%d\"\n", numero_1);//Saida
-        printf("Intermediario: \"%d\"\n", numero_2);//Saida
-        printf("Maior: \"%d\"\n", numero_3);//Saida
+        printf("Menor: \"%d\"\nIntermediario: \"%d\"\nMaior: \"%d\"\n", numero_1, numero_2, numero_3);//Saida
     }
     
     return 0;
