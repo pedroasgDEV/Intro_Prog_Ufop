@@ -1,7 +1,9 @@
+#.gitignore
+
 #arquivos
-.gitignore
 *.pdf
 
 #diretorios
 Teorica/exercicios/exec/
+Pratica/exec/
 .vscode/
