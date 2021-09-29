@@ -25,14 +25,13 @@ int main(){
     //Entrada
     printf("Digite um numero: ");
     scanf("%d", &numero_1);
-    printf("Digite outro numero diferente do anterior: ");
+    printf("Digite outro numero: ");
     scanf("%d", &numero_2);
-    printf("Digite mais outro numero diferente dos anteriores: ");
+    printf("Digite mais outro numero: ");
     scanf("%d", &numero_3);
 
     //Processamento
     //Organizando os numeros
-    
     //Probabilidade 1
     if((numero_1 > numero_2) && (numero_1 > numero_3) && (numero_2 > numero_3)){
         printf("Menor: \"%d\"\nIntermediario: \"%d\"\nMaior: \"%d\"\n", numero_3, numero_2, numero_1);//Saida
@@ -63,5 +62,35 @@ int main(){
         printf("Menor: \"%d\"\nIntermediario: \"%d\"\nMaior: \"%d\"\n", numero_1, numero_2, numero_3);//Saida
     }
     
+    //Probabilidade 7 e 8
+    if(numero_1 == numero_2){
+        if(numero_1 > numero_3){
+            printf("Menor: \"%d\"\nMaior: \"%d\"\n", numero_3, numero_1);//Saida 
+        }
+        else{
+             printf("Menor: \"%d\"\nMaior: \"%d\"\n", numero_1, numero_3);//Saida 
+        }
+    }
+
+    //Probabilidade 9 e 10
+    if(numero_1 == numero_3){
+        if(numero_1 > numero_2){
+            printf("Menor: \"%d\"\nMaior: \"%d\"\n", numero_2, numero_1);//Saida 
+        }
+        else{
+             printf("Menor: \"%d\"\nMaior: \"%d\"\n", numero_1, numero_2);//Saida 
+        }
+    }
+
+    //probabilidade 11 e 12
+    if(numero_2 == numero_3){
+        if(numero_1 > numero_3){
+            printf("Menor: \"%d\"\nMaior: \"%d\"\n", numero_3, numero_1);//Saida 
+        }
+        else{
+             printf("Menor: \"%d\"\nMaior: \"%d\"\n", numero_1, numero_3);//Saida 
+        }
+    }
+
     return 0;
 }
