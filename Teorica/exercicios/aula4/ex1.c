@@ -4,7 +4,7 @@
 //Variaveis globais
 int a, b;
 
-void main(){
+int main(){
     //Entrada
     scanf("%d %d", &a, &b);
 
@@ -15,4 +15,5 @@ void main(){
     else{
         printf("%i é o maior\n", b);//Saida
     }
+    return 0;
 }
