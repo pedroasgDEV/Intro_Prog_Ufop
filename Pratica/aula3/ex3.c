@@ -17,7 +17,7 @@ Finalmente, imprima a duração total do jogo (na função main()) em minutos.
 #include <stdio.h>
 
 //Prototipo da função que ira calcular a duração do jogo
-void calculaDuracao(int hora_inicio, int minuto_inicio, int hora_final, int minuto_final, int *duracao);
+void calculaDuracao(int *hora_inicio, int *minuto_inicio, int *hora_final, int *minuto_final, int *duracao);
 
 int main(){
     //Variaveis
