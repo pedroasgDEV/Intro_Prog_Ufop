@@ -1,8 +1,8 @@
-
 /*
-QUESTÃO 3
-Faça um programa que dado um número inteiro ímpar X(validar entrada),
-imprima um losangulo de asteríscos de largura X.
+Questão 2:
+Dados 2 números inteiros x e y, crie uma função do tipo void que
+calcule a soma dos primos no intervalo ]x,y]. Imprima o resultado dentro do
+main().
 */
 
 //Bibliotecas 
