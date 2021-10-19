@@ -2,8 +2,10 @@
 
 #arquivos
 *.pdf
+*.png
 
 #diretorios
 Teorica/exercicios/exec/
 Pratica/exec/
+Tutoria/exec/
 .vscode/

@@ -36,6 +36,6 @@ int main(){
 
     //Saida
     printf("Em fahrenheit é: %.2f\n", fahrenheit); //Saida em Fahrenheit
-    printf("Em fahrenheit é: %.2f\n", kelvin); //Saida em Kelvin
+    printf("Em kelvin é: %.2f\n", kelvin); //Saida em Kelvin
     return 0;
 }

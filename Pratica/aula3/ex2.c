@@ -42,19 +42,19 @@ int main(){
 
     //Verificação de se há raizes
     if (delta >= 0){ //Se há raizes
-            printf("1: Delta maior ou igual a zero, há raizes possiveis\n");
-            
-            //Verificação da quantidade de raizes
-            if (delta == 0){ //Se só há uma raiz possivel
-                printf("O valor da unica raiz possivel é: %.2lf\n", x_1); //Saida do valor da primeira raiz
-            }
-            else{ //Se há duas raizes possiveis
-                printf("O valor da primeira raiz é: %.2lf\n", x_1); //Saida do valor da primeira raiz
-                printf("O valor da segunda raiz é: %.2lf\n", x_2); //Saida do valor da segunda raiz
-            }
+        printf("1: Delta maior ou igual a zero, há raizes possiveis\n");
+        
+        //Verificação da quantidade de raizes
+        if (delta == 0){ //Se só há uma raiz possivel
+            printf("O valor da unica raiz possivel é: %.2lf\n", x_1); //Saida do valor da primeira raiz
         }
-        else{ //Se não há raizes
-            printf("0: Delta menor que zero, não há raizes possiveis\n");
+        else{ //Se há duas raizes possiveis
+            printf("O valor da primeira raiz é: %.2lf\n", x_1); //Saida do valor da primeira raiz
+            printf("O valor da segunda raiz é: %.2lf\n", x_2); //Saida do valor da segunda raiz
         }
+    }
+    else{ //Se não há raizes
+        printf("0: Delta menor que zero, não há raizes possiveis\n");
+    }
     return 0;
 }
