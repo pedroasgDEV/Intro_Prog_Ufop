@@ -12,24 +12,24 @@ quanto são os múltiplos de y. A impressão deve ser feita no main().
 //Prototio das funções
 void calcIntervalo(int *x, int *y, int *z, int *numb);
 
+//Funções
+void calcIntervalo(int *x, int *y, int *z, int *numb){ 
+    //Variaveis da função
+    int i = *x;
+
+    ///Laço de repetição
+    while(i <= *z){
+        if (i % *y == 0){ //Se o numero for multiplo de y
+            (*numb)++;
+        }
+        i++;
+    }
+}
+
 int main(){
     //Variaveis
     int x, y , z;
     int numb = 0; //numero de multiplos de y
-
-    //Funções
-    void calcIntervalo(int *x, int *y, int *z, int *numb){ 
-        //Variaveis da função
-        int i = *x;
-
-        ///Laço de repetição
-        while(i <= *z){
-            if (i % *y == 0){ //Se o numero for multiplo de y
-                (*numb)++;
-            }
-            i++;
-        }
-    }
 
     //Entrada
     printf("Digite um numero para x: "); scanf("%d", &x); //Entrada do x

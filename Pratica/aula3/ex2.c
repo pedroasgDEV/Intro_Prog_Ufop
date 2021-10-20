@@ -16,17 +16,16 @@ Crie um aplicativo que calcula as raı́zes de uma equação do 2o grau.
 //Prototipo da função que ira calcular as raizes de equação do 2o grau
 void calculaRaizes(double a, double b, double c, double *delta, double *x_1, double *x_2);
 
+//Função que ira calcular as raizes de equação do 2o grau
+void calculaRaizes(double a, double b, double c, double *delta, double *x_1, double *x_2){
+    *delta = pow(b, 2) - (4 * a * c); //Calculo do delta
+    *x_1 = (-b + sqrt(*delta)) / (2 * a); //Calculo da primeira raiz
+    *x_2 = (-b - sqrt(*delta)) / (2 * a); //Calculo da segunda raiz
+}
+
 int main(){
     //Variaveis
     double a, b, c, delta, x_1, x_2;
-
-
-    //Função que ira calcular as raizes de equação do 2o grau
-    void calculaRaizes(double a, double b, double c, double *delta, double *x_1, double *x_2){
-        *delta = pow(b, 2) - (4 * a * c); //Calculo do delta
-        *x_1 = (-b + sqrt(*delta)) / (2 * a); //Calculo da primeira raiz
-        *x_2 = (-b - sqrt(*delta)) / (2 * a); //Calculo da segunda raiz
-    }
 
     //Entrada
     printf("Data uma equação de segundo grau \"a * (x)^2 + b * x + c = 0\" \n");

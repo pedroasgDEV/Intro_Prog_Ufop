@@ -20,29 +20,29 @@ void consoante();
 //Variavel global
 char letra;
 
-int main(){
-    //Função que ira analisar se a letra ́e uma consoante ou não
-    void consoante(){
-        switch (letra){
-            //Se caso a variavel for vogal 
-            case 'A': case 'E': case 'I': case 'O': case 'U':
-            case 'a': case 'e': case 'i': case 'o': case 'u':
+//Função que ira analisar se a letra ́e uma consoante ou não
+void consoante(){
+    switch (letra){
+        //Se caso a variavel for vogal 
+        case 'A': case 'E': case 'I': case 'O': case 'U':
+        case 'a': case 'e': case 'i': case 'o': case 'u':
+            printf("'%c' não é uma consoante\n", letra);//Saida
+            break;
+        default:
+            //Se caso a variavel for um simbolo usando a tabela ASCII
+            if ((letra < 'A') || ((letra > 'Z') && (letra < 'a')) || (letra > 'z')){
                 printf("'%c' não é uma consoante\n", letra);//Saida
-                break;
-            default:
-                //Se caso a variavel for um simbolo usando a tabela ASCII
-                if ((letra < 'A') || ((letra > 'Z') && (letra < 'a')) || (letra > 'z')){
-                    printf("'%c' não é uma consoante\n", letra);//Saida
-                }
+            }
 
-                //Se caso a variavel for uma consoante
-                else{
-                    printf("'%c' é uma consoante\n", letra);//Saida
-                }
-                break;
-        }
+            //Se caso a variavel for uma consoante
+            else{
+                printf("'%c' é uma consoante\n", letra);//Saida
+            }
+            break;
     }
+}
 
+int main(){
     //Entrada
     printf("Digite somente uma letra: "); scanf("%c", &letra);
     consoante();

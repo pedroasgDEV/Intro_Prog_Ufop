@@ -17,16 +17,16 @@ em Fahrenheit e Kelvin.
 //Prototipo da função que ira converter uma temperatura em celsius para fahrenheit e kelvin
 void converterCelsius(float celsius, float *fahrenheit, float *kelvin);
 
+//Função que ira converter uma temperatura em celsius para fahrenheit e kelvin
+void converterCelsius(float celsius, float *fahrenheit, float *kelvin){
+    *fahrenheit = (celsius * 9/5) + 32.00; // Celsius para Fahrenheit
+    *kelvin = celsius + 273.15; //Celsius para Kelvin
+}
+
+
 int main(){
     //Variaveis
     float celsius, fahrenheit, kelvin;
-
-
-    //Função que ira converter uma temperatura em celsius para fahrenheit e kelvin
-    void converterCelsius(float celsius, float *fahrenheit, float *kelvin){
-        *fahrenheit = (celsius * 9/5) + 32.00; // Celsius para Fahrenheit
-        *kelvin = celsius + 273.15; //Celsius para Kelvin
-    }
 
     //Entrada
     printf("Digite uma temperatura em celsius: "); scanf("%f", &celsius);

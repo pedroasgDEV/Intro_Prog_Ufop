@@ -16,40 +16,41 @@ informar os valores de x e y, que devem ser pares e tais que x < y.
 //Prototio das função que cria um Trapesio
 void calcTrapesio(int x, int y); 
 
+//Funções
+void calcTrapesio(int x, int y){ //Função que cria um Trapesio
+    //Variaveis da função
+    int i = x;
+    int p = 0;
+    int c = 0;
+    int espacos = (y - x) / 2; //espaços para dar forma ao Trapesio
+    
+    //Saida
+    //Laço de repetição para fazer o Trapesio
+    while(i <= y){ 
+        if (i % 2 == 0){//verifica se o numero de i é par
+            while(c < espacos){//faz os espaços que daram forma ao Trapesio
+                printf(" ");
+                c++;
+            }
+            c = 0;
+            espacos--;
+
+            while(p < i){//faz os * do Trapesio
+                printf("*");
+                p++;
+            }
+            p = 0;
+
+            printf("\n");  
+        }
+        i++;
+    }
+}
+
 int main(){
     //Variaveis
     int x, y;
 
-    //Funções
-    void calcTrapesio(int x, int y){ //Função que cria um Trapesio
-        //Variaveis da função
-        int i = x;
-        int p = 0;
-        int c = 0;
-        int espacos = (y - x) / 2; //espaços para dar forma ao Trapesio
-        
-        //Saida
-        //Laço de repetição para fazer o Trapesio
-        while(i <= y){ 
-            if (i % 2 == 0){//verifica se o numero de i é par
-                while(c < espacos){//faz os espaços que daram forma ao Trapesio
-                    printf(" ");
-                    c++;
-                }
-                c = 0;
-                espacos--;
-
-                while(p < i){//faz os * do Trapesio
-                    printf("*");
-                    p++;
-                }
-                p = 0;
-
-                printf("\n");  
-            }
-            i++;
-        }
-    }
     //Entrada
     printf("Digite os valores de x e y: "); scanf("%d %d", &x, &y); //Entrada do x e y
 

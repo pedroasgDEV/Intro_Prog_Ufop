@@ -12,43 +12,43 @@ main().
 void calcIntervalo(int *x, int *y, int *numb); //Função da soma dos numeros primos no intervalo
 int primo(int i); //Função para verificar se é primo
 
+//Funções
+int primo(int i){ //Função para verificar se é primo
+    //Variaveis da função
+    int p = 2;
+    
+    if(i <= 1){//Se ele for 0 ou 1
+        return 0; //Se não for primo
+    }
+    else{
+        //Laço que ira verificar se o numero é primo
+        while ( p < i){
+            if (i % p == 0){//Se ele for divisivel por um numero diferente dele mesmo e 1
+                return 0; //se não for primo
+            }
+            p++;
+        }
+        return 1; //Se for primo
+    }
+}
+
+void calcIntervalo(int *x, int *y, int *numb){ //Função da soma dos numeros primos no intervalo
+    //Variaveis da função
+    int i = *x + 1;
+
+    ///Laço de repetição
+    while(i <= *y){
+        if (primo(i) == 1){ //Se o numero for primo
+            *numb += i; //Soma dos primos
+        }
+        i++;
+    }
+}
+
 int main(){
     //Variaveis
     int x, y; 
     int numb = 0;
-
-    //Funções
-    int primo(int i){ //Função para verificar se é primo
-        //Variaveis da função
-        int p = 2;
-        
-        if(i <= 1){//Se ele for 0 ou 1
-            return 0; //Se não for primo
-        }
-        else{
-            //Laço que ira verificar se o numero é primo
-            while ( p < i){
-                if (i % p == 0){//Se ele for divisivel por um numero diferente dele mesmo e 1
-                    return 0; //se não for primo
-                }
-                p++;
-            }
-            return 1; //Se for primo
-        }
-    }
-
-    void calcIntervalo(int *x, int *y, int *numb){ //Função da soma dos numeros primos no intervalo
-        //Variaveis da função
-        int i = *x + 1;
-
-        ///Laço de repetição
-        while(i <= *y){
-            if (primo(i) == 1){ //Se o numero for primo
-                *numb += i; //Soma dos primos
-            }
-            i++;
-        }
-    }
 
     //Entrada
     printf("Digite um numero para x: "); scanf("%d", &x); //Entrada do x

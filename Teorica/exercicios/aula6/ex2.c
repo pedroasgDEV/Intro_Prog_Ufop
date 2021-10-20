@@ -12,16 +12,15 @@ sim, mas eu fiz ele, "i have the power hahaha(risadas malignas insanas)"
 */
 
 //Aqui tbm não vão ter funcões globais
+//Funções
+//Função que calcula o perimetro de um triangulo
+void perimetro(int a, int b, int c){
+    printf("O perimetro do triangulo é %d\n", a + b + c);//Saida
+}
 
 int main(){
     //Variaveis :(
     int a,b,c;
-
-    //Funções
-    //Função que calcula o perimetro de um triangulo
-    void perimetro(int a, int b, int c){
-        printf("O perimetro do triangulo é %d\n", a + b + c);//Saida
-    }
 
     //Entrada
     printf("digite os lados de um triangulo: "); scanf("%d", &a);scanf("%d", &b);scanf("%d", &c);

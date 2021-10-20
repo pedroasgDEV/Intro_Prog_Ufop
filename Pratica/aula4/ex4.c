@@ -18,39 +18,39 @@ diagonais:
 //Prototio das função que simula os movimentos do bispo
 void movBispo(int coluna, int linha); 
 
+//Funções
+void movBispo(int coluna, int linha){ //Função que simula os movimentos do bispo
+    //Variaveis da função
+    int x = 1;
+    int y = 1;
+
+    //Layout da parte de cima
+    printf("     1  2  3  4  5  6  7  8\n");
+    printf("   -------------------------\n");
+    
+    //Laço de repetição para simular os movimentos do bispo
+    while(y <= 8){ //Laço da linha
+        printf("%d | ", y);// //Layout da parte lateral
+
+        while (x <= 8){ //Laço da coluna
+            if((x == coluna - (y - linha)) || (x == coluna + (y - linha))){ //Verifica se nessa posição o bispo alcança
+                printf(" x ");
+            }
+            else{
+                printf(" - ");
+            }
+
+            x++;
+        }
+        x = 1;
+        printf("\n"); 
+        y++;
+    }
+}
+
 int main(){
     //Variaveis
     int coluna, linha;
-
-    //Funções
-    void movBispo(int coluna, int linha){ //Função que simula os movimentos do bispo
-        //Variaveis da função
-        int x = 1;
-        int y = 1;
-
-        //Layout da parte de cima
-        printf("     1  2  3  4  5  6  7  8\n");
-        printf("   -------------------------\n");
-        
-        //Laço de repetição para simular os movimentos do bispo
-        while(y <= 8){ //Laço da linha
-            printf("%d | ", y);// //Layout da parte lateral
-
-            while (x <= 8){ //Laço da coluna
-                if((x == coluna - (y - linha)) || (x == coluna + (y - linha))){ //Verifica se nessa posição o bispo alcança
-                    printf(" x ");
-                }
-                else{
-                    printf(" - ");
-                }
-
-                x++;
-            }
-            x = 1;
-            printf("\n"); 
-            y++;
-        }
-    }
 
     //Entrada
     printf("Movimentos de um Bispo no xadrez!\n");

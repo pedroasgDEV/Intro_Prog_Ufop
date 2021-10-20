@@ -5,34 +5,34 @@
 int MDC(int nmr_1, int nmr_2);//Prototipo da função de MDC
 void troca(int *nmr_1, int *nmr_2);//Prototio da função de troca
 
+//Funções
+void troca(int *nmr_1, int *nmr_2){ //Função de troca
+    //Variaveis da função
+    int temp = *nmr_1;
+    *nmr_1 = *nmr_2;
+    *nmr_2 = temp;
+}
+
+int MDC(int nmr_1, int nmr_2){ //Função de MDC
+    //Variaveis da função
+    int divisor;
+
+    if(nmr_1 < nmr_2){ // se o numero 2 é maior que numero 1
+        troca(&nmr_1, &nmr_2);//Troca os numeros
+    }
+
+    do{//Loop dp MDC
+        divisor = nmr_1 % nmr_2;
+        nmr_1 = nmr_2;
+        nmr_2 = divisor;
+    } while (divisor != 0);
+    
+    
+    return nmr_1;//Retorno o MDC
+}
+
+
 int main(){
-    //Funções
-
-    void troca(int *nmr_1, int *nmr_2){ //Função de troca
-        //Variaveis da função
-        int temp = *nmr_1;
-        *nmr_1 = *nmr_2;
-        *nmr_2 = temp;
-    }
-
-    int MDC(int nmr_1, int nmr_2){ //Função de MDC
-        //Variaveis da função
-        int divisor;
-
-        if(nmr_1 < nmr_2){ // se o numero 2 é maior que numero 1
-            troca(&nmr_1, &nmr_2);//Troca os numeros
-        }
-
-        do{//Loop dp MDC
-            divisor = nmr_1 % nmr_2;
-            nmr_1 = nmr_2;
-            nmr_2 = divisor;
-        } while (divisor != 0);
-        
-        
-        return nmr_1;//Retorno o MDC
-    }
-
     //Variaveis
     int nmr_1, nmr_2;
 

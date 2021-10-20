@@ -17,14 +17,15 @@ e em seguida calcula e imprime a distancia entre esses dois pontos.
 //Prototipo da função que ira medir a distancia entre os dois pontos
 double distancia(double x1, double y1, double x2, double y2);
 
+//Função que mede a distancia entre os dois pontos
+double distancia(double x1, double y1, double x2, double y2){
+    return sqrt( pow(x2 - x1, 2) + pow(y2 - y1, 2) ); //Processamento 
+}
+
+
 int main(){
     //Variaveis
     double x1, y1, x2, y2;
-
-    //Função que mede a distancia entre os dois pontos
-    double distancia(double x1, double y1, double x2, double y2){
-        return sqrt( pow(x2 - x1, 2) + pow(y2 - y1, 2) ); //Processamento 
-    }
 
     //Entrada
     printf("Dê as cordenas de dois pontos de um plano cartesiano\n\n");
