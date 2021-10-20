@@ -19,14 +19,22 @@ int main(){
 
     //Funções
     int primo(int i){ //Função para verificar se é primo
+        //Variaveis da função
         int p = 2;
-        while ( p < i){
-            if (i % p == 0){//Se ele for divisivel por um numero diferente dele
-                return 0; //se não for primo
-            }
-            p++;
+        
+        if(i <= 1){//Se ele for 0 ou 1
+            return 0; //Se não for primo
         }
-        return 1; //se for primo
+        else{
+            //Laço que ira verificar se o numero é primo
+            while ( p < i){
+                if (i % p == 0){//Se ele for divisivel por um numero diferente dele mesmo e 1
+                    return 0; //se não for primo
+                }
+                p++;
+            }
+            return 1; //Se for primo
+        }
     }
 
     void calcIntervalo(int *x, int *y, int *numb){ //Função da soma dos numeros primos no intervalo
@@ -53,11 +61,18 @@ int main(){
         printf("Digite um numero para y: "); scanf("%d", &y); //Entrada do y
     }
 
+    while ((x < 0) || (y < 0)){//se os numeros não forem naturais
+        printf("ERRO: Numeros não são naturais\n");
+        printf("Digite um numero para x: "); scanf("%d", &x); //Entrada do x
+        printf("Digite um numero para y: "); scanf("%d", &y); //Entrada do y
+
+    }
+
     //Processamento
     calcIntervalo(&x, &y, &numb);
     
     //Saida
-    printf(" A soma dos multiplos entre %d e %d é %d\n", x, y, numb);
+    printf("A soma dos primos entre %d e %d é %d\n", x, y, numb);
 
     return 0;
 }
