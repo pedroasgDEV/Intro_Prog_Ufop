@@ -11,24 +11,25 @@ double ordena3(int *x, int *y, int *z){
         }
     }
     if((*y < *x) && (*y < *z)){
-        *x = b;
         if(*x < *z){
+            *x = b;
             *y = a;
         }
         else{
+            *x = b;
             *y = c;
             *z = a;
         }
     }
     if((*z < *x) && (*z < *y)){
-        *x = c;
         if(*x < *y){
+            *x = c;
             *y = a;
             *z = b;
         }
         else{
+            *x = c;
             *z = a;
-            *y = b;
         }
     }
     return (*x + *y + *z)/3;
