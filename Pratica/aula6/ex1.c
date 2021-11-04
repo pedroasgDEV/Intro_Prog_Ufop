@@ -21,19 +21,16 @@ double pi(int numb);
 double pi(int numb){ //Função que calcula o pi
     //Variaveis da função
     int i = 1;
-    double s = 1;
+    double soma = 1; 
+    int sin = -1;
     
     while (i < numb){
-        if((i+1) % 2 == 0){//Verifica se o termo será positivo
-            s -= 1.0/pow(1 + (2 * i) , 3);
-        }
-        else{//Verifica se o termo for negativo
-            s += 1.0/pow(1 + (2 * i), 3);
-        }
+        soma += sin * 1.0/pow(1 + (2 * i), 3);
+        sin *= -1;
         i++;
     }
 
-    return pow(s * 32.0, 1.0/3);
+    return pow(soma * 32.0, 1.0/3);
 }
 
 int main(){
