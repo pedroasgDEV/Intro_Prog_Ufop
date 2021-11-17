@@ -12,6 +12,32 @@ Faça um programa em C para efetua multiplicação de matrizes
 //Bibliotecas 
 #include <stdio.h>
 
+//dimensão matriz
+#define t_max 10
+
+//prototipo das funções
+void ler(int a[][t_max], int x, int y);
+void imprimir(int a[][t_max], int x, int y);
+
+//Funções
+void ler(int a[][t_max], int x, int y){
+    for (int i = 0; i < x; i++){
+        for (int j = 0; j < y; j++){
+            printf("[%d][%d]: ", i, j); scanf("%d", &a[i][j]);
+        }
+    }
+}
+
+void imprimir(int a[][t_max], int x, int y){
+    for (int i = 0; i < x; i++){
+        for (int j = 0; j < y; j++){
+            printf("%5d", a[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+
 int main(){
     //Variaveis
     int m, p, q, n, soma = 0;
@@ -32,22 +58,14 @@ int main(){
     }
     
     //Matrizes
-    int a[m][p], b[q][n], c[m][n];
+    int a[m][t_max], b[q][t_max], c[m][t_max];
 
     //Entradas das Matrizes A e B 
-    printf("Digite os valores da matriz B\n");
-    for (int i = 0; i < m; i++){
-        for (int j = 0; j < p; j++){
-            printf("[%d][%d]: ", i, j); scanf("%d", &a[i][j]);
-        }
-    }
+    printf("Digite os valores da matriz A\n");
+    ler(a, m, p);
 
     printf("Digite os valores da matriz B\n");
-    for (int i = 0; i < p; i++){
-        for (int j = 0; j < n; j++){
-            printf("[%d][%d]: ", i, j); scanf("%d", &b[i][j]);
-        }
-    }
+    ler(b, p, n);
     
     //Matriz produto
     for(int i = 0; i < m; i++){
@@ -62,12 +80,7 @@ int main(){
     
     printf("\n");
     //Imprimir matriz do produto
-    for(int i = 0; i < m; i++){
-        for(int j = 0; j < n; j++){
-            printf("%5d", c[i][j]);
-        }
-        printf("\n");
-    }
+    imprimir(c, m, n);
     
     return 0;
 }
