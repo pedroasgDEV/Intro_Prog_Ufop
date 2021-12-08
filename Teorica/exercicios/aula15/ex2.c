@@ -8,11 +8,11 @@ int **trasnsposta(int **v, int n, int m);
 //Função
 int **trasnsposta(int **v, int n, int m){
     //matriz temporario
-    int **temp = malloc(n * sizeof(int));
+    int **temp = malloc(n * sizeof(int*));
   
-    //Preneche o vetor temporario, com o inverso do vetor parametro
+    //Entrada o vetor temporario, com o inverso do vetor parametro
     for(int i = 0; i < n; i++){
-        temp[i] = malloc(m * sizeof(int*));
+        temp[i] = malloc(m * sizeof(int));
         for(int j = 0; j < m; j++){
             temp[i][j] = v[j][i];
         }
@@ -23,18 +23,18 @@ int **trasnsposta(int **v, int n, int m){
 
 int main(){
     //Variaveis
-    int n, m;
+    int m, n;
 
     //Define a dimensão do vetor
-    printf("Digite o tamanho do vetor (n x m): "); scanf("%d %d", &n, &m);
-    int **v = malloc(n * sizeof(int*));
+    printf("Digite o tamanho do vetor (n x m): "); scanf("%d %d", &m, &n);
+    int **v = malloc(m * sizeof(int*));
 
-    //Preenche o vetor
+    //Entrada o vetor
     printf("Digite os dados do vetor: \n");
     
-    for(int i = 0; i < n; i++){
-        v[i] = malloc(m * sizeof(int));
-        for(int j = 0; j < m; j++){
+    for(int i = 0; i < m; i++){
+        v[i] = malloc(n * sizeof(int));
+        for(int j = 0; j < n; j++){
             printf("[%d][%d]: ", i, j); scanf("%d", &v[i][j]);
         }       
     }
@@ -50,6 +50,9 @@ int main(){
         }
         printf("\n");
         free(v[i]);
+    }
+
+    for(int i = 0; i < m; i++){
         free(a[i]);
     }
     
