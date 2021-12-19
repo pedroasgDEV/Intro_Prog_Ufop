@@ -1,0 +1,18 @@
+
+**ARQUIVOS DICIONARIO**
+
+Os arquivos dicionario são usados para criar um novo jogo, neles
+deverá haver a quantidade de linhas(m) e colunas(n) do caça-palavras,
+a quantidade de palavras e as palavras que serão caçadas.
+
+exemplo de arquivo dicionario:
+
+* m n
+* 5
+* GANDALF
+* BILBO
+* NUMENOR
+* TOLKIEN
+* ANEL
+
+#end

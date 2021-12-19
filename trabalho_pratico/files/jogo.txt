@@ -1,0 +1,14 @@
+
+**SOBRE O JOGO CAÇA-PALAVRAS**
+
+O jogo Caça-Palavras é um passatempo que consiste de letras
+arranjadas de forma aparentemente aleatória em uma matriz
+quadrada ou retangular. O objetivo do jogo é encontrar e marcar
+as palavras escondidas na matriz tão rapidamente quanto possı́vel.
+As palavras podem estar escondidas verticalmente, horizontalmente ou
+diagonalmente dentro da matriz. As palavras são arranjadas
+normalmente de modo que possam ser lidas da esquerda para a direita
+ou de cima para baixo, sendo que em passatempos de maior dificuldade
+também pode ocorrer o oposto.
+
+#end
