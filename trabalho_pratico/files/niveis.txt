@@ -7,7 +7,8 @@ da esquerda para a direita, enquanto as palavras na vertical devem
 ser lidas de cima para baixo.
 
 MÉDIO : No nı́vel médio, as palavras podem ser dispostas como no nı́vel
-fácil e também na diagonal, sempre da esquerda para direita.
+fácil e também na diagonal de cima para baixo ou de baixo para cima,
+mas sempre da esquerda para direita.
 
 DIFÍCIL : No nı́vel difı́cil, as palavras podem ser dispostas na horizontal,
 vertical e diagonal. A diferença dos demais nı́veis é que as palavras podem

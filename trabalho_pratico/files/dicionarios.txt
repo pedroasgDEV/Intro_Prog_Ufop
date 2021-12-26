@@ -3,7 +3,13 @@
 
 Os arquivos dicionario são usados para criar um novo jogo, neles
 deverá haver a quantidade de linhas(m) e colunas(n) do caça-palavras,
-a quantidade de palavras e as palavras que serão caçadas.
+a quantidade de palavras e as palavras que serão caçadas. Contudo há
+algumas condições para o bom funcionamento do jogo, as palavras não devem
+utrapaçar as dimeções das matrizes, tanto em tamanho, como em quantidade,
+e há um limite maximo de ate 26 para ambas as dimeções da matriz, pois usaremos
+letras maiusculas para mapear o caça-palavras.
+
+OBS: Deve ser uma palavra por linha.
 
 exemplo de arquivo dicionario:
 

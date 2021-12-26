@@ -1,0 +1,21 @@
+**COMO JOGAR**
+
+O jogador deve digitar um dos comandos a seguir, até que todas as
+palavras sejam encontradas ou até que um dos comandos que encerram
+o programa seja executado (“resolver” ou “sair”).
+
+marcar : para marcar uma palavra encontrada. O usuário deve digitar,
+logo após o comando, as coordenadas de inı́cio e fim da palavra,
+respectivamente. Exemplo: “marcar CD CJ” indica que a palavra começa
+na linha “C”, coluna “D” e termina na linha “C”, coluna “J”.
+
+salvar : para armazenar em um arquivo o jogo em seu estado atual.
+O usuário deve digitar o nome do arquivo logo após o comando.
+Exemplo: “salvar jogo.txt” salva o jogo no arquivo “jogo.txt”.
+
+resolver : exibe a matriz resolvida com as palavras em destaque e
+finaliza o jogo.
+
+sair : encerra o programa, abandonando o jogo (sem salvar as alterações).
+
+#end

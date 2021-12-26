@@ -7,9 +7,13 @@ turma: 41;
 #ifndef LAYOUTS_H_INLCUDED
 #define LAYOUTS_H_INLCUDED
 
-//Prototipo das funções 
+//Bibliotecas
+#include <stdio.h>
+
+//Prototipo das funções
 void main_layout();
-void new_game();
+void arq_newgame();
+void nivel_newgame(FILE *arquvivo);
 void continue_game();
 void instructions();
 

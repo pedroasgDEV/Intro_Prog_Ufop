@@ -1,5 +1,5 @@
 all:
-	gcc source/*.c  -o jogo
+	gcc source/*.c  -o jogo -Wall
 
 run:
 	./jogo
