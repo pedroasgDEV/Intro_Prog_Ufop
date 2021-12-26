@@ -13,7 +13,10 @@ turma: 41;
 #include "layouts.h"
 #include "jogo.h"
 
-void read(char arquivo[100]){
+//Prototipo de funções
+void read(char arquivo[100]);
+
+void read(char arquivo[100]){ //Função le um arquivo txt e imprime
     system("clear"); //limpar tela
     FILE *txt = fopen(arquivo, "r"); //Abrindo arquivo a ser lido
     char temp[1000]; //string temporaria
@@ -28,7 +31,7 @@ void read(char arquivo[100]){
     fclose(txt);
 }
 
-void nivel_newgame(FILE *arquvivo){
+void nivel_newgame(FILE *arquvivo){ //Função pega o nivel do jogo
     system("clear"); //Limpar tela
     char escolha[5];
     //Tela para definir a dificuldade
@@ -53,7 +56,7 @@ void nivel_newgame(FILE *arquvivo){
     }
 }
 
-void arq_newgame(){
+void arq_newgame(){ //Função pega o arquivo dicionario e verifica se ele exite
     system("clear"); //limpar tela
     char arquivo[100];
     //Tela de novo jogo
@@ -80,7 +83,7 @@ void arq_newgame(){
     }
 }
 
-void instructions(){
+void instructions(){ //Função das instruções do jogo
     system("clear"); //limpar tela
     char escolha[5];
     //Tela de instruções
@@ -113,7 +116,7 @@ void instructions(){
     }
 }
 
-void main_layout(){
+void main_layout(){ //Tela inicial do jogo
     system("clear"); //limpar tela
     char escolha[5];
     //Tela inicial

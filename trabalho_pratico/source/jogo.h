@@ -22,6 +22,5 @@ typedef struct {
 
 void cria_jogo(FILE *arquivo, int nivel);
 jogo gera_matriz(jogo game, int nivel);
-//int gera_coordenadas(char ***matriz, int m , int n, char palavra[], int **coordenadas, int nivel);
 
 #endif
