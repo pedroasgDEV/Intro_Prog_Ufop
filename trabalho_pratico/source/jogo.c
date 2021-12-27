@@ -12,6 +12,8 @@ turma: 41;
 
 //Arquivos cabeçalho
 #include "jogo.h"
+#include "cor.h"
+#include "layouts.h"
 
 jogo gera_matriz(jogo game, int nivel){
     srand(time(NULL)); //Semete para gerar numeros aleatorios
@@ -20,11 +22,6 @@ jogo gera_matriz(jogo game, int nivel){
         for(int j = 0; j < game.n; j++){
            game.matriz[i][j] = '-'; //Gera uma matriz de '-'
         }
-    }
-
-    game.wrdsspot = malloc(game.wrds * sizeof(int*)); //Gera a matriz dinamica das coordenadas das palavras
-    for(int i = 0; i < game.wrds; i++){
-        game.wrdsspot[i] = malloc(4 * sizeof(int));
     }
 
     int confirm = 0; //variavel que confirma se a função funcionol
@@ -57,7 +54,7 @@ jogo gera_matriz(jogo game, int nivel){
             }
 
             for(int j = 0; j < sizestring; j++){ //Deixa as letras maiusculas
-                if((temp[j] <= 122) && (temp[j] >= 97)){temp[j] -= 32;}
+                if((temp[j] <= 'z') && (temp[j] >= 'a')){temp[j] -= 32;}
             }
 
             switch(position){ //Define as corredenadas iniciais e finais
@@ -151,30 +148,81 @@ jogo gera_matriz(jogo game, int nivel){
     return game;
 }
 
-void cria_jogo(FILE *txt, int nivel){ //Cria a struct do jogo
+void play_jogo(jogo game){ //Função que vai rodar o jogo
+    system(limpa);
+    //Parte de cima do caça-palavras
+    printf("   ");
+    for(int i = 65; i < game.n + 65; i++){
+        printf(ANSI_BOLD  ANSI_COLOR_YELLOW "%4c" ANSI_RESET, (char) i);
+    }
+    printf("\n");
+
+    //Parte de cima da estrutura do caça_palavras
+    printf("    " TAB_TL TAB_HOR TAB_HOR TAB_HOR);
+    for(int i = 0; i < game.n - 1; i++){
+        printf(TAB_TJ TAB_HOR TAB_HOR  TAB_HOR );
+    }
+    printf(TAB_TR "\n");
+
+    for(int i = 0; i < game.m; i++){
+        //Parte lateral esquerda do caça-palavras
+        printf(ANSI_BOLD  ANSI_COLOR_YELLOW "%3c " ANSI_RESET, (char) (i + 65)); 
+
+        //Palavras do caça-palavras
+        for(int j = 0; j < game.n; j++){
+            printf(TAB_VER "%2c ", game.matriz[i][j]);
+        }
+        printf(TAB_VER);        
+        
+        //Parte lateral esquerda do caça-palavras
+        printf(ANSI_BOLD  ANSI_COLOR_YELLOW " %c" ANSI_RESET, (char) (i + 65)); 
+        
+        //Meios do caça-palavras
+        if(i < game.m - 1){
+            printf("\n    " TAB_ML TAB_HOR TAB_HOR TAB_HOR);
+            for(int j = 0; j < game.n - 1; j++){
+                printf(TAB_MJ TAB_HOR TAB_HOR TAB_HOR);
+            }        
+            printf(TAB_MR);
+        }
+
+        printf("\n");
+    }
+
+    //Parte de baixo da estrutura do caça_palavras
+    printf("    " TAB_BL TAB_HOR TAB_HOR TAB_HOR);
+    for(int i = 0; i < game.n - 1; i++){
+        printf(TAB_BJ TAB_HOR TAB_HOR  TAB_HOR );
+    }
+    printf(TAB_BR "\n");   
+    
+    printf("   ");
+    for(int i = 65; i < game.n + 65; i++){
+        printf(ANSI_BOLD  ANSI_COLOR_YELLOW "%4c" ANSI_RESET, (char) i);
+    }
+    printf("\n\n");
+
+    //Palavras
+    for(int i = 0; i < game.wrds; i++){
+        printf("     %s %c%c %c%c\n", game.palavras[i], game.wrdsspot_ok[i][0], game.wrdsspot_ok[i][1], game.wrdsspot_ok[i][2], game.wrdsspot_ok[i][3]);
+    }  
+    printf("\n");
+}
+
+void cria_jogo(char arquvivo[], int nivel){ //Cria a struct do jogo
     jogo game; //Struct do jogo
     
+    FILE *txt = fopen(arquvivo, "r"); //Abre o arquivo
+
     fscanf(txt, "%d %d", &game.m, &game.n); //Pega as dimensões da matriz
     fscanf(txt, "%d", &game.wrds); //Pega a quantidade de palavras do arquivo
 
-    game.palavras = malloc(game.wrds * sizeof(char*)); //Cria vetor de strings
     for(int i = 0; i < game.wrds; i++){//Pega as palavras do arquivo
-        game.palavras[i] = malloc(50 * sizeof(char));
         fscanf(txt, "%s", game.palavras[i]);
     }
     
     fclose(txt); //Fecha o arquivo
 
     game = gera_matriz(game, nivel); 
-    //criar função para começar o jogo
-    
-    for(int i = 0; i < game.wrds; i++){
-        free(game.wrdsspot[i]);
-    }
-    free(game.wrdsspot);
-
-    for(int i = 0; i < game.wrds; i++){
-        free(game.palavras[i]);
-    }
-    free(game.palavras);
+    play_jogo(game);
 }

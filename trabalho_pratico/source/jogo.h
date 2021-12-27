@@ -14,13 +14,15 @@ turma: 41;
 typedef struct {
     char matriz[26][26];
     int m, n; //Dimensões da matriz
-    char **palavras; //Palavras
+    char palavras[26][27]; //Palavras
     int wrds; //Quantidade de palavras
-    int **wrdsspot; //posição das palavaras na matriz
+    int wrdsspot[26][4]; //Coordenadas das palavaras na matriz
+    int wrdsspot_ok[48][26]; //Coordenadas das palavaras encontradas pelo usuario
     int nivel; //Dificuldade do jogo
 } jogo;
 
-void cria_jogo(FILE *arquivo, int nivel);
+void cria_jogo(char arquvivo[], int nivel);
 jogo gera_matriz(jogo game, int nivel);
+void play_jogo(jogo game);
 
 #endif

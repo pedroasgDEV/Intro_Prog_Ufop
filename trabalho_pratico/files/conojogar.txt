@@ -6,7 +6,8 @@ o programa seja executado (“resolver” ou “sair”).
 
 marcar : para marcar uma palavra encontrada. O usuário deve digitar,
 logo após o comando, as coordenadas de inı́cio e fim da palavra,
-respectivamente. Exemplo: “marcar CD CJ” indica que a palavra começa
+respectivamente.
+Exemplo: “marcar CD CJ” indica que a palavra começa
 na linha “C”, coluna “D” e termina na linha “C”, coluna “J”.
 
 salvar : para armazenar em um arquivo o jogo em seu estado atual.
