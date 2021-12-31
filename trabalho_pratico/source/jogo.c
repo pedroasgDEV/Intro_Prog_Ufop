@@ -332,12 +332,11 @@ void salva_jogo(char arquivo[], jogo game){ //Salvar o jogo
     }
 
     fclose(txt);
-    read("files/salvo.txt");
 }
 
 void play_jogo(jogo game){ //Função que vai rodar o jogo
     //Variaveis da funação
-    char escolha[20], localiza[4], arquivo[80]; 
+    char escolha[20], localiza[4], arquivo[80] = "save.txt"; 
     int confirm; //variavel que confirma se ta tudo certo
     int tmn_str; 
 
@@ -496,22 +495,24 @@ void play_jogo(jogo game){ //Função que vai rodar o jogo
             else if(strcmp(escolha, "inicio") == 0){main_layout(); break;} //Caso o jogador queira voltar a tela inicial
             
             else if(strcmp(escolha, "salvar") == 0){ //Caso o jogador queira salvar o jogo
-                
+    
+                confirm = 1;
+
                 for(int i = tmn_str + 1, j = 0; 1; i++, j++){ //Laço que coloca o nome do arquivo em uma outra string
                     
                     if((j > 0) &&((escolha[i] == ' ') || (escolha[i] == '\n'))){ //se tiver chegado ao final da palavra
                         arquivo[j] = '\0'; 
                         break;
                     } 
-
+                    if(escolha[i] < 33){confirm = 0; break;} //Se o nome do arquivo tiver um caracter invalido
                     arquivo[j] = escolha[i];
                 } 
                 
-                //Se o nome do arquivo tiver um espaço antes
-                if(arquivo[0] == ' '){printf("ERRO Nome de arquivo invalido\n"); continue;}
+                //Se o nome do arquivo for invalido
+                if(confirm == 0){printf("ERRO Nome de arquivo invalido\n"); continue;}
 
                 salva_jogo(arquivo, game);
-                main_layout(); break;
+                printf("\nJogo salvo com sucesso ;)\n\n"); continue;
             } 
             
             else if(strcmp(escolha, "resolver") == 0){ //Caso o jogador queira mostrar as respostas
@@ -540,12 +541,6 @@ void play_jogo(jogo game){ //Função que vai rodar o jogo
 
                     if((localiza[j] > 'Z') || (localiza[j] < 'A')){ //Se houver um caracter que não é letra nas coordenadas
                         printf("ERRO Há um caracter que não é letra nas coordenadas ou a estrutura da entrada das coordenadas é invalida\n");
-                        confirm = 0;
-                        break;
-                    }
-                    
-                    else if((localiza[j] > (game.m + 64)) || (localiza[j] > (game.n + 64))){ //Se a coordenada indicada pelo usuario passar alguma das dimensões da matriz
-                        printf("ERRO Alguma das coordenadas indicadas ultrapassa o limite do caça-palavras\n");
                         confirm = 0;
                         break;
                     }
