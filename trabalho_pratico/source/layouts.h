@@ -18,7 +18,7 @@ turma: 41;
 //Bibliotecas
 #include <stdio.h>
 
-
+//Prototipo das funções
 void read(char arquivo[100]);
 int verifica_arqnovo(FILE *txt);
 int verifica_arqsalvo(FILE *txt);
