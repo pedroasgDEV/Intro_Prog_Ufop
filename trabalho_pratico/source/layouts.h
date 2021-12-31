@@ -18,11 +18,14 @@ turma: 41;
 //Bibliotecas
 #include <stdio.h>
 
-//Prototipo das funções
-void main_layout();
-void arq_newgame();
+
+void read(char arquivo[100]);
+int verifica_arqnovo(FILE *txt);
+int verifica_arqsalvo(FILE *txt);
 void nivel_newgame(char arquvivo[]);
-void continue_game();
+void arq_newgame(int i);
+void arq_continuegame();
 void instructions();
+void main_layout();
 
 #endif

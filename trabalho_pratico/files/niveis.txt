@@ -12,6 +12,6 @@ mas sempre da esquerda para direita.
 
 DIFÍCIL : No nı́vel difı́cil, as palavras podem ser dispostas na horizontal,
 vertical e diagonal. A diferença dos demais nı́veis é que as palavras podem
-ser lidas também de baixo para cima e da direita para a esquerda.
+estar invertidas.
 
 #end

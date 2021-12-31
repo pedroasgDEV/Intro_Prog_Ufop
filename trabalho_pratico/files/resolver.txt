@@ -1,0 +1,12 @@
+
+                     ╭╮╭╮
+                     ┃┃┃┃
+                     ┃┃┃┃
+                     ┃┗┛┣┳╮
+                    ╭┻━━┓┃┃
+                    ┃╲┏━╯┻┫
+                    ╰╮╯┊┊╭╯
+
+Viu como se faz?, agora tente voce um novo jogo.
+
+#end

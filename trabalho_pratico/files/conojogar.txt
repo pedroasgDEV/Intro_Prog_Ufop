@@ -1,3 +1,4 @@
+
 **COMO JOGAR**
 
 O jogador deve digitar um dos comandos a seguir, até que todas as
