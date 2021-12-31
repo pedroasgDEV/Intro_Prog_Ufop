@@ -19,7 +19,7 @@ typedef struct {
     int wrdsspot[26][4]; //Coordenadas das palavaras na matriz
     int wrdsspot_ok[26][4]; //Coordenadas das palavaras encontradas pelo jogador
     int nivel; //Dificuldade do jogo
-    int acertos;
+    int acertos; //A quantidade de palavras encontradas
 } jogo;
 
 //Prototipo das funções

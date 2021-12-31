@@ -336,7 +336,7 @@ void salva_jogo(char arquivo[], jogo game){ //Salvar o jogo
 
 void play_jogo(jogo game){ //Função que vai rodar o jogo
     //Variaveis da funação
-    char escolha[20], localiza[4], arquivo[80] = "save.txt"; 
+    char escolha[20], localiza[4], arquivo[80]; 
     int confirm; //variavel que confirma se ta tudo certo
     int tmn_str; 
 
