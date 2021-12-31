@@ -218,7 +218,7 @@ void arq_continuegame(){ //Função que abre um arquvo de um jogo salvo
                 else{
                     printf("\nERRO a estrutura do arquivo foi adulterada, tente outro arquivo ou comece um novo jogo\n\n");
                     continue;
-                    }
+                }
             }
             else{ //Caso o arquivo não exista
                 printf("ERRO arquivo não encontrado\n");
