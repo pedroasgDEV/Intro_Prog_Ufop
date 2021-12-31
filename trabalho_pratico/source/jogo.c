@@ -153,7 +153,7 @@ jogo gera_matriz(jogo game, int nivel){ //Essa função gera uma matriz para um 
             }
 
             repet++; //Soma a quantidade de repetições do laço
-            if(repet > 1000){arq_newgame(1);} //Para evitar looping infinitos
+            if(repet > 1000){arq_newgame(1); break;} //Para evitar looping infinitos
         }
 
         confirm = 0;
